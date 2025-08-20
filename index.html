@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - Ei Truck</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+
+    <header class="site-header" id="header">
+        <div class="brand">
+            Ei Truck
+        </div>
+        <nav class="nav">
+            <a href="#" onclick="mudarPaginaNav(1)">Produto</a>
+            <a href="#" onclick="mudarPaginaNav(2)">Pesquisas</a>
+            <a href="#" onclick="mudarPaginaNav(3)">GerminareTECH</a>
+            <a href="#" onclick="mudarPaginaNav(3)">Sobre</a>
+            <a class="cta" href="#cta">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="copy">
+                    <h1>Recorte de vídeos <br>Ei Truck:<span class="break"></span> Logística/Telemetria</h1>
+                    <h2>Descomplique sua gestão</h2>
+                    <p>A plataforma que potencializa sua frota com recortes de vídeo da telemetria e aplicativos
+                        móveis!
+                        <strong>Reduza custos, melhore a produtividade e otimize jornadas de trabalho</strong> com
+                        uma
+                        plataforma que oferece uma grande credibilidade e potêncial no mercado.
+                    </p>
+                    <div class="actions">
+                        <a class="button" href="#transforme">Login</a>
+                        <a class="button secondary" href="#como-funciona">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="visual container">
+                <div class="frame">
+                    <img src="sa" alt="Hero visual" />
+                </div>
+            </div>
+        </section>
+
+
+        <div id="pagina1" class="conteudo ativo">
+            <!-- PROBLEMAS / BENEFÍCIOS -->
+
+            <div class="okay">
+                <h3 class="kicker">Ei Truck - Página 1</h3>
+            </div>
+            <section class="problems" id="solucoes">
+                <div class="container">
+                    <h2>Solução para os principais problemas da sua gestão</h2>
+                    <p class="lead">Com o uso de telemetria permita ter mais controle e
+                        visibilidade
+                        da operação</p>
+                    <div class="grid">
+                        <article class="card-adv">
+                            <h4>CUSTOS</h4>
+                            <p>Custos administrativos.</p>
+                        </article>
+                        <article class="card-adv">
+                            <h4>PRODUTIVIDADE</h4>
+                            <p>Identificação de melhorias, aumentando serviços e entregas.</p>
+                        </article>
+                        <article class="card-adv">
+                            <h4>CONTROLE</h4>
+                            <p>Conformidade operacional e regulatória para uma gestão com mais fluidez.</p>
+                        </article>
+                        <article class="card-adv">
+                            <h4>SEGURANÇA</h4>
+                            <p>Melhores condições de segurança e proteção dos funcionários. <br></p>
+                        </article>
+                        <article class="card-adv">
+                            <h4>EXPERIÊNCIA</h4>
+                            <p>Melhor experiência, atendendo às expectativas.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TRANSFORME OS DADOS -->
+
+            <section class="transform" id="transforme">
+                <div class="container">
+                    <h2>Transforme os dados dos seus veículos em conhecimento e potencialize os seus resultados</h2>
+                    <div class="tabs" role="tablist">
+                        <button class="tab active" data-tab="video">LOGÍSTICA</button>
+                        <button class="tab" data-tab="tele">TELEMETRIA</button>
+                    </div>
+
+                    <div class="panel" id="panel-video">
+                        <div class="copy">
+                            <h3>Logística: <strong>Rodoviário</strong></h3>
+                            <p>A logística é a área responsável pelo planejamento, execução e controle do fluxo de
+                                materiais, produtos, serviços e informações, desde a origem até o destino final, de
+                                forma eficiente e estratégica.</p>
+                            <div class="bullets">
+                                <div class="bullet"><i></i><span>Coisa 1</span></div>
+                                <div class="bullet"><i></i><span>Coisa 2</span></div>
+                                <div class="bullet"><i></i><span>Coisa 3</span></div>
+                            </div>
+                        </div>
+                        <div class="visual">
+                            <img src="sa" alt="Coisa" />
+                        </div>
+                    </div>
+
+                    <div class="panel hide" id="panel-tele">
+                        <div class="copy">
+                            <h3>Telemetria: <strong>dados em tempo real para decisões certeiras</strong></h3>
+                            <p>Velocidade, rota, paradas e desempenho consolidados para reduzir custos e aumentar a
+                                eficiência operacional.</p>
+                            <div class="bullets">
+                                <div class="bullet"><i></i><span>Coisa 1</span></div>
+                                <div class="bullet"><i></i><span>Coisa 2</span></div>
+                                <div class="bullet"><i></i><span>Coisa 3</span></div>
+                            </div>
+                        </div>
+                        <div class="visual">
+                            <img src="sa" alt="Coisa" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CAMS -->
+
+            <section class="cams" id="produtos">
+                <div class="container">
+                    <div class="big-tabs">
+                        <div class="big-tab active" data-cam="multi">
+                            <span>Ei Truck coisa</span>
+                        </div>
+                        <div class="big-tab" data-cam="fadiga">
+                            <span>Ei Truck coisa</span>
+                        </div>
+                        <div class="big-tab" data-cam="cabine">
+                            <span>Ei Truck coisa</span>
+                        </div>
+                    </div>
+                    <div class="panel active" id="cam-multi">
+                        <div class="copy">
+                            <h3>Exemplo</h3>
+                            <p>ExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemplo.
+                            </p>
+                        </div>
+                        <div class="visual">
+                            <img src="sa" alt="Coisa" />
+                        </div>
+                    </div>
+                    <div class="panel" id="cam-fadiga">
+                        <div class="copy">
+                            <h3>Exemplo</h3>
+                            <p>ExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemplo.
+                            </p>
+                        </div>
+                        <div class="visual">
+                            <img src="sa" alt="Coisa" />
+                        </div>
+                    </div>
+                    <div class="panel" id="cam-cabine">
+                        <div class="copy">
+                            <h3>Exemplo</h3>
+                            <p>ExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemplo.
+                            </p>
+                        </div>
+                        <div class="visual">
+                            <img src="sa" alt="Coisa" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NOSSOS DIFERENCIAIS -->
+
+            <section class="diffs" id="diferenciais">
+                <div class="container">
+                    <h3 class="kicker">Nossos diferenciais</h3>
+                    <h2>A Ei Truck tem as melhores vantagens</h2>
+                    <div class="wrap">
+                        <div class="steps">
+                            <div class="step">
+                                <h4><span class="n">1</span> A Ei Truck coisa </h4>
+                                <p>A Ei Truck coisa A Ei Truck coisa A Ei Truck coisa A Ei Truck coisa </p>
+                            </div>
+                            <div class="step">
+                                <h4><span class="n">2</span> A Ei Truck coisa </h4>
+                                <p>A Ei Truck coisa A Ei Truck coisa A Ei Truck coisa A Ei Truck coisa </p>
+                            </div>
+                            <div class="step">
+                                <h4><span class="n">3</span> A Ei Truck coisa </h4>
+                                <p>A Ei Truck coisa A Ei Truck coisa A Ei Truck coisa A Ei Truck coisa </p>
+                            </div>
+                            <div class="step">
+                                <h4><span class="n">4</span> A Ei Truck coisa </h4>
+                                <p>A Ei Truck coisa A Ei Truck coisa A Ei Truck coisa A Ei Truck coisa </p>
+                            </div>
+                        </div>
+                        <div class="visual">
+                            <img src="sa" alt="coisa" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- COMO FUNCIONA -->
+
+            <section class="how" id="como-funciona">
+                <div class="container">
+                    <div class="title">COMO FUNCIONA</div>
+                    <h2>Instale os dispositivos na sua frota</h2>
+                    <p>Comece a coletar dados sobre os veículos e o modo de condução dos motoristas instantaneamente.
+                        Use, câmeras embarcadas e aplicativos móveis.</p>
+                    <div class="devices">
+                        <img class="floaty" src="sg" alt="Device 1" />
+                        <img class="floaty" src="sa" alt="Device 2" />
+                        <img class="floaty" src="sa" alt="Device 3" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- GALERIA -->
+
+            <section class="gallery" id="galeria">
+                <div class="container">
+                    <h2>Mais visuais da solução</h2>
+                    <div class="grid">
+                        <img src="sa" alt="img1" />
+                        <img src="sa" alt="img2" />
+                        <img src="sa" alt="img3" />
+                        <img src="sa" alt="img4" />
+                        <img src="sa" alt="img5" />
+                    </div>
+                </div>
+            </section>
+    </main>
+
+    </div>
+    <div id="pagina2" class="conteudo">
+
+        <!-- PROBLEMAS / BENEFÍCIOS -->
+
+        <div class="okay">
+            <h3 class="kicker">Ei Truck - Página 2</h3>
+        </div>
+        <section class="problems" id="solucoes">
+            <div class="container">
+                <h2>Pagina 2 teste Solução para os principais problemas da sua gestão</h2>
+                <p class="lead">Com o uso de telemetria permita ter mais controle e
+                    visibilidade
+                    da operação</p>
+                <div class="grid">
+                    <article class="card-adv">
+                        <h4>CUSTOS</h4>
+                        <p>Custos administrativos.</p>
+                    </article>
+                    <article class="card-adv">
+                        <h4>PRODUTIVIDADE</h4>
+                        <p>Identificação de melhorias, aumentando serviços e entregas.</p>
+                    </article>
+                    <article class="card-adv">
+                        <h4>CONTROLE</h4>
+                        <p>Conformidade operacional e regulatória para uma gestão com mais fluidez.</p>
+                    </article>
+                    <article class="card-adv">
+                        <h4>SEGURANÇA</h4>
+                        <p>Melhores condições de segurança e proteção dos funcionários. <br></p>
+                    </article>
+                    <article class="card-adv">
+                        <h4>EXPERIÊNCIA</h4>
+                        <p>Melhor experiência, atendendo às expectativas.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRANSFORME OS DADOS -->
+
+        <section class="transform" id="transforme">
+            <div class="container">
+                <h2>Transforme os dados dos seus veículos em conhecimento e potencialize os seus resultados</h2>
+                <div class="tabs" role="tablist">
+                    <button class="tab active" data-tab="video">LOGÍSTICA</button>
+                    <button class="tab" data-tab="tele">TELEMETRIA</button>
+                </div>
+
+                <div class="panel" id="panel-video">
+                    <div class="copy">
+                        <h3>Logística: <strong>Rodoviário</strong></h3>
+                        <p>A logística é a área responsável pelo planejamento, execução e controle do fluxo de
+                            materiais, produtos, serviços e informações, desde a origem até o destino final, de
+                            forma eficiente e estratégica.</p>
+                        <div class="bullets">
+                            <div class="bullet"><i></i><span>Coisa 1</span></div>
+                            <div class="bullet"><i></i><span>Coisa 2</span></div>
+                            <div class="bullet"><i></i><span>Coisa 3</span></div>
+                        </div>
+                    </div>
+                    <div class="visual">
+                        <img src="sa" alt="Coisa" />
+                    </div>
+                </div>
+
+                <div class="panel hide" id="panel-tele">
+                    <div class="copy">
+                        <h3>Telemetria: <strong>dados em tempo real para decisões certeiras</strong></h3>
+                        <p>Velocidade, rota, paradas e desempenho consolidados para reduzir custos e aumentar a
+                            eficiência operacional.</p>
+                        <div class="bullets">
+                            <div class="bullet"><i></i><span>Coisa 1</span></div>
+                            <div class="bullet"><i></i><span>Coisa 2</span></div>
+                            <div class="bullet"><i></i><span>Coisa 3</span></div>
+                        </div>
+                    </div>
+                    <div class="visual">
+                        <img src="sa" alt="Coisa" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAMS -->
+
+        <section class="cams" id="produtos">
+            <div class="container">
+                <div class="big-tabs">
+                    <div class="big-tab active" data-cam="multi">
+                        <span>Ei Truck coisa</span>
+                    </div>
+                    <div class="big-tab" data-cam="fadiga">
+                        <span>Ei Truck coisa</span>
+                    </div>
+                    <div class="big-tab" data-cam="cabine">
+                        <span>Ei Truck coisa</span>
+                    </div>
+                </div>
+                <div class="panel active" id="cam-multi">
+                    <div class="copy">
+                        <h3>Exemplo</h3>
+                        <p>ExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemplo.
+                        </p>
+                    </div>
+                    <div class="visual">
+                        <img src="sa" alt="Coisa" />
+                    </div>
+                </div>
+                <div class="panel" id="cam-fadiga">
+                    <div class="copy">
+                        <h3>Exemplo</h3>
+                        <p>ExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemplo.
+                        </p>
+                    </div>
+                    <div class="visual">
+                        <img src="sa" alt="Coisa" />
+                    </div>
+                </div>
+                <div class="panel" id="cam-cabine">
+                    <div class="copy">
+                        <h3>Exemplo</h3>
+                        <p>ExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemplo.
+                        </p>
+                    </div>
+                    <div class="visual">
+                        <img src="sa" alt="Coisa" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NOSSOS DIFERENCIAIS -->
+
+        <section class="diffs" id="diferenciais">
+            <div class="container">
+                <h3 class="kicker">Nossos diferenciais</h3>
+                <h2>A Ei Truck tem as melhores vantagens</h2>
+                <div class="wrap">
+                    <div class="steps">
+                        <div class="step">
+                            <h4><span class="n">1</span> A Ei Truck coisa </h4>
+                            <p>A Ei Truck coisa A Ei Truck coisa A Ei Truck coisa A Ei Truck coisa </p>
+                        </div>
+                        <div class="step">
+                            <h4><span class="n">2</span> A Ei Truck coisa </h4>
+                            <p>A Ei Truck coisa A Ei Truck coisa A Ei Truck coisa A Ei Truck coisa </p>
+                        </div>
+                        <div class="step">
+                            <h4><span class="n">3</span> A Ei Truck coisa </h4>
+                            <p>A Ei Truck coisa A Ei Truck coisa A Ei Truck coisa A Ei Truck coisa </p>
+                        </div>
+                        <div class="step">
+                            <h4><span class="n">4</span> A Ei Truck coisa </h4>
+                            <p>A Ei Truck coisa A Ei Truck coisa A Ei Truck coisa A Ei Truck coisa </p>
+                        </div>
+                    </div>
+                    <div class="visual">
+                        <img src="sa" alt="coisa" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMO FUNCIONA -->
+
+        <section class="how" id="como-funciona">
+            <div class="container">
+                <div class="title">COMO FUNCIONA</div>
+                <h2>Instale os dispositivos na sua frota</h2>
+                <p>Comece a coletar dados sobre os veículos e o modo de condução dos motoristas instantaneamente. Use,
+                    câmeras embarcadas e aplicativos móveis.</p>
+                <div class="devices">
+                    <img class="floaty" src="sg" alt="Device 1" />
+                    <img class="floaty" src="sa" alt="Device 2" />
+                    <img class="floaty" src="sa" alt="Device 3" />
+                </div>
+            </div>
+        </section>
+
+        <!-- GALERIA -->
+
+        <section class="gallery" id="galeria">
+            <div class="container">
+                <h2>Mais visuais da solução</h2>
+                <div class="grid">
+                    <img src="sa" alt="img1" />
+                    <img src="sa" alt="img2" />
+                    <img src="sa" alt="img3" />
+                    <img src="sa" alt="img4" />
+                    <img src="sa" alt="img5" />
+                </div>
+            </div>
+        </section>
+        </main>
+    </div>
+    <div id="pagina3" class="conteudo">
+
+        <!-- PROBLEMAS / BENEFÍCIOS -->
+
+        <div class="okay">
+            <h3 class="kicker">Ei Truck - Página 3</h3>
+        </div>
+        <section class="problems" id="solucoes">
+            <div class="container">
+                <h2>Pagina 3 teste para os principais problemas da sua gestão</h2>
+                <p class="lead">Com o uso de telemetria permita ter mais controle e
+                    visibilidade
+                    da operação</p>
+                <div class="grid">
+                    <article class="card-adv">
+                        <h4>CUSTOS</h4>
+                        <p>Custos administrativos.</p>
+                    </article>
+                    <article class="card-adv">
+                        <h4>PRODUTIVIDADE</h4>
+                        <p>Identificação de melhorias, aumentando serviços e entregas.</p>
+                    </article>
+                    <article class="card-adv">
+                        <h4>CONTROLE</h4>
+                        <p>Conformidade operacional e regulatória para uma gestão com mais fluidez.</p>
+                    </article>
+                    <article class="card-adv">
+                        <h4>SEGURANÇA</h4>
+                        <p>Melhores condições de segurança e proteção dos funcionários. <br></p>
+                    </article>
+                    <article class="card-adv">
+                        <h4>EXPERIÊNCIA</h4>
+                        <p>Melhor experiência, atendendo às expectativas.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRANSFORME OS DADOS -->
+
+        <section class="transform" id="transforme">
+            <div class="container">
+                <h2>Transforme os dados dos seus veículos em conhecimento e potencialize os seus resultados</h2>
+                <div class="tabs" role="tablist">
+                    <button class="tab active" data-tab="video">LOGÍSTICA</button>
+                    <button class="tab" data-tab="tele">TELEMETRIA</button>
+                </div>
+
+                <div class="panel" id="panel-video">
+                    <div class="copy">
+                        <h3>Logística: <strong>Rodoviário</strong></h3>
+                        <p>A logística é a área responsável pelo planejamento, execução e controle do fluxo de
+                            materiais, produtos, serviços e informações, desde a origem até o destino final, de
+                            forma eficiente e estratégica.</p>
+                        <div class="bullets">
+                            <div class="bullet"><i></i><span>Coisa 1</span></div>
+                            <div class="bullet"><i></i><span>Coisa 2</span></div>
+                            <div class="bullet"><i></i><span>Coisa 3</span></div>
+                        </div>
+                    </div>
+                    <div class="visual">
+                        <img src="sa" alt="Coisa" />
+                    </div>
+                </div>
+
+                <div class="panel hide" id="panel-tele">
+                    <div class="copy">
+                        <h3>Telemetria: <strong>dados em tempo real para decisões certeiras</strong></h3>
+                        <p>Velocidade, rota, paradas e desempenho consolidados para reduzir custos e aumentar a
+                            eficiência operacional.</p>
+                        <div class="bullets">
+                            <div class="bullet"><i></i><span>Coisa 1</span></div>
+                            <div class="bullet"><i></i><span>Coisa 2</span></div>
+                            <div class="bullet"><i></i><span>Coisa 3</span></div>
+                        </div>
+                    </div>
+                    <div class="visual">
+                        <img src="sa" alt="Coisa" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAMS -->
+
+        <section class="cams" id="produtos">
+            <div class="container">
+                <div class="big-tabs">
+                    <div class="big-tab active" data-cam="multi">
+                        <span>Ei Truck coisa</span>
+                    </div>
+                    <div class="big-tab" data-cam="fadiga">
+                        <span>Ei Truck coisa</span>
+                    </div>
+                    <div class="big-tab" data-cam="cabine">
+                        <span>Ei Truck coisa</span>
+                    </div>
+                </div>
+                <div class="panel active" id="cam-multi">
+                    <div class="copy">
+                        <h3>Exemplo</h3>
+                        <p>ExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemplo.
+                        </p>
+                    </div>
+                    <div class="visual">
+                        <img src="sa" alt="Coisa" />
+                    </div>
+                </div>
+                <div class="panel" id="cam-fadiga">
+                    <div class="copy">
+                        <h3>Exemplo</h3>
+                        <p>ExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemplo.
+                        </p>
+                    </div>
+                    <div class="visual">
+                        <img src="sa" alt="Coisa" />
+                    </div>
+                </div>
+                <div class="panel" id="cam-cabine">
+                    <div class="copy">
+                        <h3>Exemplo</h3>
+                        <p>ExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemploExemplo.
+                        </p>
+                    </div>
+                    <div class="visual">
+                        <img src="sa" alt="Coisa" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NOSSOS DIFERENCIAIS -->
+
+        <section class="diffs" id="diferenciais">
+            <div class="container">
+                <h3 class="kicker">Nossos diferenciais</h3>
+                <h2>A Ei Truck tem as melhores vantagens</h2>
+                <div class="wrap">
+                    <div class="steps">
+                        <div class="step">
+                            <h4><span class="n">1</span> A Ei Truck coisa </h4>
+                            <p>A Ei Truck coisa A Ei Truck coisa A Ei Truck coisa A Ei Truck coisa </p>
+                        </div>
+                        <div class="step">
+                            <h4><span class="n">2</span> A Ei Truck coisa </h4>
+                            <p>A Ei Truck coisa A Ei Truck coisa A Ei Truck coisa A Ei Truck coisa </p>
+                        </div>
+                        <div class="step">
+                            <h4><span class="n">3</span> A Ei Truck coisa </h4>
+                            <p>A Ei Truck coisa A Ei Truck coisa A Ei Truck coisa A Ei Truck coisa </p>
+                        </div>
+                        <div class="step">
+                            <h4><span class="n">4</span> A Ei Truck coisa </h4>
+                            <p>A Ei Truck coisa A Ei Truck coisa A Ei Truck coisa A Ei Truck coisa </p>
+                        </div>
+                    </div>
+                    <div class="visual">
+                        <img src="sa" alt="coisa" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMO FUNCIONA -->
+
+        <section class="how" id="como-funciona">
+            <div class="container">
+                <div class="title">COMO FUNCIONA</div>
+                <h2>Instale os dispositivos na sua frota</h2>
+                <p>Comece a coletar dados sobre os veículos e o modo de condução dos motoristas instantaneamente. Use,
+                    câmeras embarcadas e aplicativos móveis.</p>
+                <div class="devices">
+                    <img class="floaty" src="sg" alt="Device 1" />
+                    <img class="floaty" src="sa" alt="Device 2" />
+                    <img class="floaty" src="sa" alt="Device 3" />
+                </div>
+            </div>
+        </section>
+
+        <!-- GALERIA -->
+
+        <section class="gallery" id="galeria">
+            <div class="container">
+                <h2>Mais visuais da solução</h2>
+                <div class="grid">
+                    <img src="sa" alt="img1" />
+                    <img src="sa" alt="img2" />
+                    <img src="sa" alt="img3" />
+                    <img src="sa" alt="img4" />
+                    <img src="sa" alt="img5" />
+                </div>
+            </div>
+        </section>
+        </main>
+    </div>
+
+    <!-- Botões -->
+    <div class="paginacao">
+        <button id="prevBtn" onclick="mudarPaginaAtual(-1)">&#8592;</button>
+        <button onclick="mudarPagina(1)">1</button>
+        <button onclick="mudarPagina(2)">2</button>
+        <button onclick="mudarPagina(3)">3</button>
+        <button id="nextBtn" onclick="mudarPaginaAtual(1)">&#8594;</button>
+    </div>
+
+    <br><br>
+
+    <!-- RODAPÉ -->
+
+    <footer id="footer">
+        <div class="container">
+            <div class="grid">
+                <div>
+                    <div class="brand">Ei Truck</div>
+                    <p style="margin-top:12px;color:#cfd6ff">Tecnologia para transformar <br> dados de frota em
+                        resultado.
+                    </p>
+                </div>
+                <div>
+                    <h5>Área do cliente</h5>
+                    <ul>
+                        <li><a href="#">Acesso ao painel</a></li>
+                        <li><a href="#">Central de ajuda</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Funcionalidades</h5>
+                    <ul>
+                        <li><a href="#">Detecção de Fadiga</a></li>
+                        <li><a href="#">Vídeos de riscos</a></li>
+                        <li><a href="#">Rastreamento veicular</a></li>
+                        <li><a href="#">Monitoramento de frota</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Conheça</h5>
+                    <ul>
+                        <li><a href="#">Email</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">A empresa</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Redes</h5>
+                    <ul>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bar">
+                <small>© Ei Truck — Site Oficial</small>
+                <small>Política de Privacidade</small>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        let paginaAtual = 1;
+
+        function mudarPaginaAtual(direcao) {
+            let totalPaginas = document.querySelectorAll('.conteudo').length;
+            let novaPagina = paginaAtual + direcao;
+            if (novaPagina < 1 || novaPagina > totalPaginas) return;
+            mudarPagina(novaPagina, 0); // paginação → sempre scroll no topo
+            paginaAtual = novaPagina;
+            atualizarSetas();
+        }
+
+        function mudarPagina(num, scrollPos = 0) {
+            // Esconde todos os conteúdos
+            document.querySelectorAll('.conteudo').forEach(div => div.classList.remove('ativo'));
+
+            // Mostra apenas o escolhido
+            const conteudoAtivo = document.getElementById("pagina" + num);
+            conteudoAtivo.classList.add("ativo");
+
+            // Atualiza estilo dos botões
+            document.querySelectorAll('.paginacao button').forEach(btn => btn.classList.remove('ativo'));
+            document.querySelector(`.paginacao button:nth-child(${num + 1})`).classList.add('ativo');
+
+            paginaAtual = num;
+            atualizarSetas();
+
+            if (scrollPos !== null) {
+                window.scrollTo({ top: scrollPos, behavior: 'smooth' });
+            }
+        }
+
+        function mudarPaginaNav(num) {
+            mudarPagina(num, null);
+            setTimeout(() => {
+                window.scrollTo({ top: 600 });
+            }, 0); // pequeno delay
+        }
+
+
+        function atualizarSetas() {
+            document.getElementById('prevBtn').style.display = (paginaAtual === 1) ? 'none' : 'inline-block';
+            document.getElementById('nextBtn').style.display = (paginaAtual === 3) ? 'none' : 'inline-block';
+        }
+
+        // Inicializa setas
+        atualizarSetas();
+
+
+
+        // Header muda para branco ao rolar
+        const headerEl = document.getElementById('header');
+        function updateHeader() {
+            const threshold = window.innerHeight * 0.15; // após 15% do viewport
+            if (window.scrollY > threshold) { headerEl.classList.add('header-white'); }
+            else { headerEl.classList.remove('header-white'); }
+        }
+        window.addEventListener('scroll', updateHeader, { passive: true });
+        window.addEventListener('load', updateHeader);
+
+        // Tabs de "Transforme os dados"
+        const tabs = document.querySelectorAll('.tab');
+        const panelVideo = document.getElementById('panel-video');
+        const panelTele = document.getElementById('panel-tele');
+
+        tabs.forEach(btn => btn.addEventListener('click', () => {
+            tabs.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const key = btn.dataset.tab;
+            if (key === 'video') {
+                panelVideo.classList.remove('hide');
+                panelTele.classList.add('hide');
+            } else {
+                panelTele.classList.remove('hide');
+                panelVideo.classList.add('hide');
+            }
+        }));
+
+        // Abas grandes dos produtos
+        const bigTabs = document.querySelectorAll('.big-tab');
+        const camPanels = {
+            multi: document.getElementById('cam-multi'),
+            fadiga: document.getElementById('cam-fadiga'),
+            cabine: document.getElementById('cam-cabine')
+        };
+
+        bigTabs.forEach(bt => bt.addEventListener('click', () => {
+            bigTabs.forEach(b => b.classList.remove('active'));
+            bt.classList.add('active');
+            const key = bt.dataset.cam;
+            Object.keys(camPanels).forEach(k => camPanels[k].classList.remove('active'));
+            camPanels[key].classList.add('active');
+        }));
+
+        window.onload = function () {
+            mudarPagina(1);
+            window.scrollTo(0, 0);
+        };
+
+
+    </script>
+</body>
+
+</html>
