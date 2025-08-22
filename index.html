@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page - Ei Truck</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/script.js"></script>
 </head>
 
 <body>
@@ -59,18 +60,18 @@
             </div>
             <section class="problems" id="solucoes">
                 <div class="container">
-                    <h2>Solução para os principais problemas da sua gestão</h2>
-                    <p class="lead">Com o uso de telemetria permita ter mais controle e
-                        visibilidade
-                        da operação</p>
+                    <h2>Ideia do Aplicativo</h2>
+                    <p class="lead">Solução que conecta telemetria e vídeo para gerar relatórios automáticos e rápidos.
+                    </p>
                     <div class="grid">
                         <article class="card-adv">
                             <h4>CUSTOS</h4>
-                            <p>Custos administrativos.</p>
+                            <p>Mensalidade de R$ 5.000/mês - O Ei Truck permite reduzir custos com profissionais dedicados à análise manual</p>
                         </article>
                         <article class="card-adv">
                             <h4>PRODUTIVIDADE</h4>
-                            <p>Identificação de melhorias, aumentando serviços e entregas.</p>
+                            <p>Recortes dos momentos de infrações, relatórios por evento/motorista e rankings de desempenho
+                            </p>
                         </article>
                         <article class="card-adv">
                             <h4>CONTROLE</h4>
@@ -82,8 +83,53 @@
                         </article>
                         <article class="card-adv">
                             <h4>EXPERIÊNCIA</h4>
-                            <p>Melhor experiência, atendendo às expectativas.</p>
+                            <p>Melhor experiência, atendendo às expectativas - teste realizados na escola GerminareTECH</p>
                         </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TRANSFORME OS DADOS -->
+
+            <section class="transform" id="transforme">
+                <div class="container">
+                    <h2>Transforme os dados dos seus veículos em conhecimento e potencialize os seus resultados</h2>
+                    <div class="tabs" role="tablist">
+                        <button class="tab active" data-tab="video">LOGÍSTICA</button>
+                        <button class="tab" data-tab="tele">TELEMETRIA</button>
+                    </div>
+
+                    <div class="panel" id="panel-video">
+                        <div class="copy">
+                            <h3>Logística: <strong>Rodoviário</strong></h3>
+                            <p>A logística é a área responsável pelo planejamento, execução e controle do fluxo de
+                                materiais, produtos, serviços e informações, desde a origem até o destino final, de
+                                forma eficiente e estratégica. Algumas funcões da logística:</p>
+                            <div class="bullets">
+                                <div class="bullet"><i></i><span>Transporte</span></div>
+                                <div class="bullet"><i></i><span>Gestão de estoque</span></div>
+                                <div class="bullet"><i></i><span>Processamento de pedidos</span></div>
+                            </div>
+                        </div>
+                        <div class="visual">
+                            <img src="sa" alt="Coisa" />
+                        </div>
+                    </div>
+
+                    <div class="panel hide" id="panel-tele">
+                        <div class="copy">
+                            <h3>Telemetria: <strong>dados em tempo real para decisões certeiras</strong></h3>
+                            <p>Velocidade, rota, paradas e desempenho consolidados para reduzir custos e aumentar a
+                                eficiência operacional. Principais funcões da telemetria: </p>
+                            <div class="bullets">
+                                <div class="bullet"><i></i><span>Monitoramento remoto</span></div>
+                                <div class="bullet"><i></i><span>Registro e análise de dados</span></div>
+                                <div class="bullet"><i></i><span>Alerta e prevenção de falhas</span></div>
+                            </div>
+                        </div>
+                        <div class="visual">
+                            <img src="sa" alt="Coisa" />
+                        </div>
                     </div>
                 </div>
             </section>
