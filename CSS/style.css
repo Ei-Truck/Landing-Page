@@ -331,6 +331,11 @@ section.transform {
     gap: 10px
 }
 
+.transform .panel .visual img {
+    border-radius: 20px;
+    margin-top: 40px;
+}
+
 .bullet {
     display: flex;
     gap: 10px;
