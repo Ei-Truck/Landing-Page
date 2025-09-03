@@ -56,7 +56,6 @@ button {
 .hide {
     display: none !important
 }
-
 /* HEADER */
 header.site-header {
     position: fixed;
@@ -70,12 +69,12 @@ header.site-header {
     height: 72px;
     padding: 0 28px;
     background: var(--brand-blue-2);
-    transition: background .25s ease, box-shadow .25s ease
+    transition: background .25s ease, box-shadow .25s ease;
 }
 
 header.site-header.header-white {
     background: var(--white);
-    box-shadow: 0 6px 22px rgba(10, 30, 80, .08)
+    box-shadow: 0 6px 22px rgba(10, 30, 80, .08);
 }
 
 header .brand {
@@ -85,45 +84,77 @@ header .brand {
     font-weight: 1000;
     font-size: 20px;
     letter-spacing: .1px;
-    color: #fff
+    color: #fff;
 }
 
 header.header-white .brand {
-    color: var(--brand-blue-2)
+    color: var(--brand-blue-2);
 }
 
 header .brand img {
     height: 28px;
-    width: auto
+    width: auto;
 }
 
 header nav {
     display: flex;
     align-items: center;
-    gap: 22px
+    gap: 8px;
 }
 
 header nav a {
     color: #fff;
     opacity: .95;
-    font-weight: 600
+    font-weight: 600;
 }
 
 header.header-white nav a {
-    color: var(--brand-blue-2)
+    color: var(--brand-blue-2);
 }
 
+header .tt,
 header .cta {
     padding: 10px 16px;
-    background: var(--white);
-    color: var(--brand-blue-2);
     border-radius: 999px;
-    font-weight: 700
+    transition: all 0.3s ease;
 }
 
+/* TT normal */
+header .tt:hover {
+    background-color: #ffffff;
+    color: #022B3A;
+    transform: scale(1.01);
+}
+
+/* CTA normal */
+header .cta {
+    background: var(--white);
+    color: var(--brand-blue-2);
+    font-weight: 700;
+}
+
+header .cta:hover {
+    background-color: rgb(232, 151, 0);
+    color: white;
+    transform: scale(1.05); 
+}
+
+/* Quando header for branco */
 header.header-white .cta {
     background: var(--brand-blue-2);
-    color: #fff
+    color: #fff;
+}
+
+header.header-white .tt:hover {
+    background-color: #022B3A;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+header.header-white .cta:hover {
+    background-color: orange;
+    color: white;
+    transform: scale(1.05);
 }
 
 /* HERO — PRIMEIRA IMAGEM  */
