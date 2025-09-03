@@ -673,7 +673,7 @@ footer .bar {
 }
 
 .paginacao button {
-    background: #2ecc71;
+    background: #00546B;
     color: white;
     border: none;
     padding: 10px 18px;
@@ -685,20 +685,20 @@ footer .bar {
 }
 
 .paginacao button:hover {
-    background: #27ae60;
+    background: #086680;
     transform: scale(1.1);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .paginacao button.ativo {
-    background: #145a32;
-    box-shadow: 0 0 8px #145a32;
+    background: #022B3A;
+    box-shadow: 0 0 8px #022B3A;
 }
 
 /* Estilo das setas */
 #prevBtn,
 #nextBtn {
-    background: #145a32;
+    background: #022B3A;
     border-radius: 50%;
     width: 40px;
     height: 40px;
