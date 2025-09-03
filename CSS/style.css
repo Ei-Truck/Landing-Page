@@ -147,7 +147,7 @@ header.header-white .cta {
 }
 
 header.header-white .tt:hover {
-    background-color: #022B3A;
+    background-color: #00546B;
     color: #ffffff;
     transform: scale(1.05);
 }
@@ -656,7 +656,8 @@ footer .grid {
 footer h5 {
     font-size: 16px;
     color: #fff;
-    margin-bottom: 12px
+    margin-bottom: 12px;
+    cursor: pointer;
 }
 
 footer ul {
@@ -666,15 +667,23 @@ footer ul {
 
 footer a {
     color: #cfd6ff;
-    opacity: .95
+    opacity: .95;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
 }
+
+footer a:hover {
+    color: #8aa0c9;
+    transform: translateX(4px);
+}
+
 
 footer .brand {
     display: flex;
     align-items: center;
     gap: 12px;
     color: #fff;
-    font-weight: 800
+    font-weight: 800;
+    cursor: pointer;
 }
 
 footer .brand img {
