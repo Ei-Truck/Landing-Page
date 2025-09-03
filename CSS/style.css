@@ -117,6 +117,7 @@ header .cta {
     padding: 10px 16px;
     border-radius: 999px;
     transition: all 0.3s ease;
+    user-select: none;
 }
 
 /* TT normal */
@@ -158,13 +159,12 @@ header.header-white .cta:hover {
 }
 
 /* HERO — PRIMEIRA IMAGEM  */
-
 .diffs h3.kicker {
     text-transform: uppercase;
     letter-spacing: .2em;
     color: var(--ink-500);
     text-align: center;
-    margin-bottom: 12px
+    margin-bottom: 12px;
 }
 
 section.hero {
@@ -177,7 +177,7 @@ section.hero {
     padding: 120px 0 60px;
     color: #fff;
     position: relative;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .hero::after {
@@ -185,37 +185,37 @@ section.hero {
     position: absolute;
     inset: 0;
     background: linear-gradient(90deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, 0));
-    pointer-events: none
+    pointer-events: none;
 }
 
 .hero h1 {
     font-size: 56px;
     line-height: 1.06;
     font-weight: 900;
-    letter-spacing: .2px
+    letter-spacing: .2px;
 }
 
 .hero h1 .break {
-    display: block
+    display: block;
 }
 
 .hero h2 {
     margin-top: 16px;
     font-size: 36px;
-    color: var(--brand-green)
+    color: var(--brand-green);
 }
 
 .hero p {
     margin-top: 18px;
     max-width: 620px;
     font-size: 18px;
-    line-height: 1.6
+    line-height: 1.6;
 }
 
 .hero .actions {
     margin-top: 28px;
     display: flex;
-    gap: 16px
+    gap: 16px;
 }
 
 .button {
@@ -224,12 +224,28 @@ section.hero {
     background: #00546B;
     box-shadow: var(--shadow);
     color: #fff;
-    font-weight: 800
+    font-weight: 800;
+    transition: all 0.3s ease-in-out; 
+    user-select: none;
 }
 
 .button.secondary {
     background: rgba(255, 255, 255, .12);
-    backdrop-filter: blur(6px)
+    backdrop-filter: blur(6px);
+}
+
+.hero .container .actions .button:hover {
+    background-color: rgb(232, 151, 0);
+    color: white;
+    transform: scale(1.03); 
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.hero .container .actions .button.secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transform: scale(1.03);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 .hero .visual {
@@ -240,13 +256,18 @@ section.hero {
 .hero .visual .frame {
     border-radius: 20px;
     overflow: hidden;
-    
 }
 
 .hero .visual .frame img {
     width: 100%;
-    height: auto
+    height: auto;
+    transition: transform 0.5s ease;
 }
+
+.hero .visual .frame img:hover {
+    transform: scale(1.02); 
+}
+
 
 /* SEÇÃO PROBLEMAS/benefícios  */
 section.problems {
