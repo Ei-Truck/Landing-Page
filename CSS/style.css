@@ -256,6 +256,7 @@ section.hero {
 .hero .visual .frame {
     border-radius: 20px;
     overflow: hidden;
+    user-select: none;
 }
 
 .hero .visual .frame img {
