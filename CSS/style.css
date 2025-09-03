@@ -477,17 +477,17 @@ section.transform {
     margin-top: 4px
 }
 
-/* CARDS DE PRODUTO  */
+/* CARDS DE PRODUTO */
 section.cams {
     padding: 30px 0 60px;
-    background: var(--white)
+    background: var(--white);
 }
 
 .cams .big-tabs {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 14px;
-    margin-bottom: 24px
+    margin-bottom: 24px;
 }
 
 .big-tab {
@@ -500,34 +500,73 @@ section.cams {
     border: 2px solid transparent;
     cursor: pointer;
     font-weight: 800;
-    color: var(--ink-700)
+    color: var(--ink-700);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.big-tab:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+    border-color: currentColor;
 }
 
 .big-tab.active {
     background: #eef3ff;
     border-color: #ced9ff;
-    box-shadow: 0 10px 24px rgba(40, 80, 160, .12)
+    box-shadow: 0 10px 24px rgba(40, 80, 160, .12);
 }
 
 .cams .panel {
-    display: none
+    display: none;
 }
 
 .cams .panel.active {
     display: grid;
     grid-template-columns: 1.05fr .95fr;
     gap: 26px;
-    align-items: center
+    align-items: center;
+    animation: fadeIn 0.5s ease;
 }
 
 .cams .panel h3 {
     font-size: 28px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 .cams .panel p {
     color: var(--ink-700);
-    line-height: 1.7
+    line-height: 1.7;
+}
+
+/* ANIMAÇÃO FADE-IN */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* DIFERENCIAIS */
+#diferenciais .step {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+#diferenciais .step:hover {
+    transform: translateX(6px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+#diferenciais .step h4 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#diferenciais .step .n {
+    transition: transform 0.3s ease;
+}
+
+#diferenciais .step:hover .n {
+    transform: scale(1.1);
 }
 
 /* NOSSOS DIFERENCIAIS  */
