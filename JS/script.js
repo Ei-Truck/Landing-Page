@@ -98,7 +98,6 @@ bigTabs.forEach(bt => bt.addEventListener('click', () => {
 
 window.onload = function () {
     mudarPagina(1);
-    window.scrollTo(0, 0);
 
     // Inicializa tabs para cada página
     document.querySelectorAll('.conteudo').forEach(section => {
