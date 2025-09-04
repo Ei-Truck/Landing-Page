@@ -37,6 +37,13 @@ function mudarPaginaNav(num) {
     }, 0); // pequeno delay
 }
 
+function mudarPaginaNavSobre() {
+    mudarPagina(3, null);
+    setTimeout(() => {
+        window.scrollTo({ top: 2100 });
+    }, 0);
+}
+
 
 function atualizarSetas() {
     document.getElementById('prevBtn').style.display = (paginaAtual === 1) ? 'none' : 'inline-block';
