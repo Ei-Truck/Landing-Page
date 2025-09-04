@@ -748,11 +748,9 @@ footer .brand {
     color: #fff;
     font-weight: 800;
     cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
 }
 
-footer .brand img {
-    height: 32px
-}
 
 footer .bar {
     border-top: 1px solid rgba(255, 255, 255, .12);
@@ -763,6 +761,23 @@ footer .bar {
     align-items: center;
     color: #aab6ff
 }
+
+footer .bbar {
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+footer .bbar:hover {
+    color: #8b95da;
+    transform: translateX(0px);
+}
+
+footer p {
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+    margin-top:12px;
+    color:#cfd6ff;
+    cursor: pointer;
+}
+
 
 /* RESPONSIVIDADE */
 @media (max-width:1200px) {
