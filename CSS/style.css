@@ -77,23 +77,22 @@ header.site-header.header-white {
     box-shadow: 0 6px 22px rgba(10, 30, 80, .08);
 }
 
+/* BRAND */
 header .brand {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-weight: 1000;
-    font-size: 20px;
-    letter-spacing: .1px;
-    color: #fff;
-}
-
-header.header-white .brand {
-    color: var(--brand-blue-2);
 }
 
 header .brand img {
-    height: 28px;
+    height: 42px;
     width: auto;
+    display: block;
+    transition: filter 0.3s ease;
+}
+
+header.header-white .brand img {
+    filter: brightness(0) saturate(100%) invert(27%) sepia(92%) saturate(1039%) hue-rotate(165deg) brightness(90%) contrast(92%);
 }
 
 header nav {
@@ -120,14 +119,12 @@ header .cta {
     user-select: none;
 }
 
-/* TT normal */
 header .tt:hover {
     background-color: #ffffff;
     color: #022B3A;
     transform: scale(1.01);
 }
 
-/* CTA normal */
 header .cta {
     background: var(--white);
     color: var(--brand-blue-2);
@@ -140,7 +137,6 @@ header .cta:hover {
     transform: scale(1.05); 
 }
 
-/* Quando header for branco */
 header.header-white .cta {
     background: var(--brand-blue-2);
     color: #fff;
@@ -157,6 +153,7 @@ header.header-white .cta:hover {
     color: white;
     transform: scale(1.05);
 }
+
 
 /* HERO — PRIMEIRA IMAGEM  */
 .diffs h3.kicker {
@@ -694,8 +691,18 @@ section.gallery {
 
 .gallery .grid img {
     border-radius: 16px;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, .08)
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+    cursor: pointer;
+    user-select: none;
 }
+
+.gallery .grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+    filter: brightness(1.1) saturate(1.2); 
+}
+
 
 /* RODAPÉ */
 footer {
