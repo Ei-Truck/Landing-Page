@@ -44,6 +44,12 @@ function mudarPaginaNavSobre() {
     }, 0);
 }
 
+function mudarPaginaNavSaibaMais() {
+    mudarPagina(1, null);
+    setTimeout(() => {
+        window.scrollTo({ top: 600 });
+    }, 0);
+}
 
 function atualizarSetas() {
     document.getElementById('prevBtn').style.display = (paginaAtual === 1) ? 'none' : 'inline-block';

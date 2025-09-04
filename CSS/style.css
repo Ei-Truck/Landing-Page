@@ -1061,6 +1061,11 @@ section.pricing {
     font-size: 14px;
 }
 
+.pricing-note:hover {
+    color: #032633;
+    opacity: 0.5;
+}
+
 @media (max-width: 1000px) {
     .pricing .plans {
         grid-template-columns: 1fr 1fr;
