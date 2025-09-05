@@ -1016,15 +1016,15 @@ footer p {
 
 /* Ícones dentro dos botões */
 #prevBtn img {
-    height: 15px;
+    height: 13px;
     filter: invert(1);
-    padding-left: 7px;
+    padding-left: 8px;
 }
 
 #nextBtn img {
-    height: 15px;
+    height: 13px;
     filter: invert(1);
-    padding-left: 9px;
+    padding-left: 10px;
 }
 
 /* Hover */
