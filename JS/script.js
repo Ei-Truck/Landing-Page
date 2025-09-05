@@ -51,6 +51,21 @@ function mudarPaginaNavSaibaMais() {
     }, 0);
 }
 
+function mudarPaginaNavTelemetria() {
+    mudarPagina(1, null);
+    setTimeout(() => {
+        window.scrollTo({ top: 2800 });
+    }, 0);
+}
+
+function mudarPaginaNavFuncionalidades() {
+    mudarPagina(1, null);
+    setTimeout(() => {
+        window.scrollTo({ top: 600 });
+    }, 0);
+}
+
+
 function atualizarSetas() {
     document.getElementById('prevBtn').style.display = (paginaAtual === 1) ? 'none' : 'inline-block';
     document.getElementById('nextBtn').style.display = (paginaAtual === 3) ? 'none' : 'inline-block';
