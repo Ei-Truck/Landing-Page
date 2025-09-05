@@ -132,3 +132,65 @@ window.onload = function () {
         initTabs(section);
     });
 };
+
+document.addEventListener('DOMContentLoaded', function() {
+    const transformSections = document.querySelectorAll('.transform');
+    
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.2
+    };
+    
+    const observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+                
+                // Animar a tab ativa apenas em seções transform
+                setTimeout(() => {
+                    const activePanel = entry.target.querySelector('.panel:not(.hide)');
+                    if (activePanel) {
+                        activePanel.classList.add('active-panel');
+                    }
+                }, 500);
+                
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    transformSections.forEach(section => {
+        observer.observe(section);
+    });
+    
+    // Adicionar event listeners apenas para as tabs dentro de transform
+    document.querySelectorAll('.transform .tab').forEach(tab => {
+        tab.addEventListener('click', function() {
+            const tabType = this.dataset.tab;
+            const transformSection = this.closest('.transform');
+            const panels = transformSection.querySelectorAll('.panel');
+            
+            // Remover classe active de todas as tabs na mesma seção
+            transformSection.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            
+            // Adicionar classe active à tab clicada
+            this.classList.add('active');
+            
+            // Esconder todos os painéis
+            panels.forEach(panel => {
+                panel.classList.add('hide');
+                panel.classList.remove('active-panel');
+            });
+            
+            // Mostrar o painel correspondente
+            const targetPanel = transformSection.querySelector(`#panel-${tabType}`);
+            targetPanel.classList.remove('hide');
+            
+            // Disparar animação após um pequeno delay
+            setTimeout(() => {
+                targetPanel.classList.add('active-panel');
+            }, 50);
+        });
+    });
+});

@@ -389,7 +389,8 @@ section.problems {
 /* TRANSFORME OS DADOS  */
 section.transform {
     padding: 80px 0;
-    background: var(--white)
+    background: var(--white);
+    z-index: 1;
 }
 
 .transform h2 {
@@ -474,13 +475,117 @@ section.transform {
     margin-top: 4px
 }
 
+.transform {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.transform.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.transform h2 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+}
+
+.transform.animated h2 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.transform .tabs {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease 0.4s, transform 0.8s ease 0.4s;
+}
+
+.transform.animated .tabs {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Seletores específicos para painéis nas seções transform */
+.transform .panel {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.transform .panel.active-panel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.transform .panel .copy > * {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.transform .panel.active-panel .copy h3 {
+    transition-delay: 0.2s;
+}
+
+.transform .panel.active-panel .copy p {
+    transition-delay: 0.3s;
+}
+
+.transform .panel.active-panel .copy .bullets {
+    transition-delay: 0.4s;
+}
+
+.transform .panel.active-panel .copy > * {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.transform .panel .visual {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.8s ease 0.4s, transform 0.8s ease 0.4s;
+}
+
+.transform .panel.active-panel .visual {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Melhorias nas transições de tabs - APENAS para transform */
+.transform .tab {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.transform .tab:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 83, 107, 0.2);
+}
+
+.transform .tab.active {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 83, 107, 0.25);
+}
+
+/* Garantir que a seção cams não seja afetada */
+.cams .panel,
+.cams .tab {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+}
+
 /* CARDS DE PRODUTO */
 section.cams {
     padding: 30px 0 60px;
     background: var(--white);
-    margin-top: -90px;
+    margin-top: 60px;
     margin-bottom: 0px;
     width: 100%;
+    z-index: 2;
 }
 
 .cams .big-tabs {
