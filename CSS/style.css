@@ -1000,14 +1000,13 @@ footer p {
     box-shadow: 0 0 8px #022B3A;
 }
 
-/* Estilo das setas */
+/* Botões de navegação com ícone */
 #prevBtn,
 #nextBtn {
     background: #022B3A;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
+    width: 32px;
+    height: 32px;
     padding: 0;
     display: flex;
     align-items: center;
@@ -1015,13 +1014,28 @@ footer p {
     transition: all 0.3s ease;
 }
 
+/* Ícones dentro dos botões */
+#prevBtn img {
+    height: 15px;
+    filter: invert(1);
+    padding-left: 7px;
+}
+
+#nextBtn img {
+    height: 15px;
+    filter: invert(1);
+    padding-left: 9px;
+}
+
+/* Hover */
 #prevBtn:hover,
 #nextBtn:hover {
-    background: #2980b9;
+    background: #086680;
     transform: scale(1.2);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
+/* Desabilitado */
 #prevBtn:disabled,
 #nextBtn:disabled {
     background: #bdc3c7;
@@ -1029,6 +1043,7 @@ footer p {
     transform: none;
     box-shadow: none;
 }
+
 
 /* ======= PLANOS ======= */
 section.pricing {
