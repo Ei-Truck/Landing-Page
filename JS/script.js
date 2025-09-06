@@ -1,14 +1,4 @@
-
 let paginaAtual = 1;
-
-function mudarPaginaAtual(direcao) {
-    let totalPaginas = document.querySelectorAll('.conteudo').length;
-    let novaPagina = paginaAtual + direcao;
-    if (novaPagina < 1 || novaPagina > totalPaginas) return;
-    mudarPagina(novaPagina, 0); // paginação → sempre scroll no topo
-    paginaAtual = novaPagina;
-    atualizarSetas();
-}
 
 function mudarPagina(num, scrollPos = 0) {
     // Esconde todos os conteúdos
@@ -20,10 +10,9 @@ function mudarPagina(num, scrollPos = 0) {
 
     // Atualiza estilo dos botões
     document.querySelectorAll('.paginacao button').forEach(btn => btn.classList.remove('ativo'));
-    document.querySelector(`.paginacao button:nth-child(${num + 1})`).classList.add('ativo');
+    document.querySelector(`.paginacao button:nth-child(${num})`).classList.add('ativo');
 
     paginaAtual = num;
-    atualizarSetas();
 
     if (scrollPos !== null) {
         window.scrollTo({ top: scrollPos, behavior: 'smooth' });
@@ -34,13 +23,13 @@ function mudarPaginaNav(num) {
     mudarPagina(num, null);
     setTimeout(() => {
         window.scrollTo({ top: 600 });
-    }, 0); // pequeno delay
+    }, 0);
 }
 
 function mudarPaginaNavSobre() {
     mudarPagina(3, null);
     setTimeout(() => {
-        window.scrollTo({ top: 2100 });
+        window.scrollTo({ top: 2160 });
     }, 0);
 }
 
@@ -54,7 +43,7 @@ function mudarPaginaNavSaibaMais() {
 function mudarPaginaNavTelemetria() {
     mudarPagina(1, null);
     setTimeout(() => {
-        window.scrollTo({ top: 2800 });
+        window.scrollTo({ top: 2860 });
     }, 0);
 }
 
@@ -65,21 +54,10 @@ function mudarPaginaNavFuncionalidades() {
     }, 0);
 }
 
-
-function atualizarSetas() {
-    document.getElementById('prevBtn').style.display = (paginaAtual === 1) ? 'none' : 'inline-block';
-    document.getElementById('nextBtn').style.display = (paginaAtual === 3) ? 'none' : 'inline-block';
-}
-
-// Inicializa setas
-atualizarSetas();
-
-
-
 // Header muda para branco ao rolar
 const headerEl = document.getElementById('header');
 function updateHeader() {
-    const threshold = window.innerHeight * 0.15; // após 15% do viewport
+    const threshold = window.innerHeight * 0.15;
     if (window.scrollY > threshold) { headerEl.classList.add('header-white'); }
     else { headerEl.classList.remove('header-white'); }
 }
@@ -92,7 +70,7 @@ function initTabs(section) {
     const panelVideo = section.querySelector('#panel-video');
     const panelTele = section.querySelector('#panel-tele');
 
-    if (!tabs.length || !panelVideo || !panelTele) return; // segurança
+    if (!tabs.length || !panelVideo || !panelTele) return;
 
     tabs.forEach(btn => btn.addEventListener('click', () => {
         tabs.forEach(b => b.classList.remove('active'));
@@ -133,61 +111,54 @@ window.onload = function () {
     });
 };
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const transformSections = document.querySelectorAll('.transform');
-    
+
     const observerOptions = {
         root: null,
         rootMargin: '0px',
         threshold: 0.2
     };
-    
-    const observer = new IntersectionObserver(function(entries, observer) {
+
+    const observer = new IntersectionObserver(function (entries, observer) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animated');
-                
-                // Animar a tab ativa apenas em seções transform
+
                 setTimeout(() => {
                     const activePanel = entry.target.querySelector('.panel:not(.hide)');
                     if (activePanel) {
                         activePanel.classList.add('active-panel');
                     }
                 }, 500);
-                
+
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
-    
+
     transformSections.forEach(section => {
         observer.observe(section);
     });
-    
-    // Adicionar event listeners apenas para as tabs dentro de transform
+
     document.querySelectorAll('.transform .tab').forEach(tab => {
-        tab.addEventListener('click', function() {
+        tab.addEventListener('click', function () {
             const tabType = this.dataset.tab;
             const transformSection = this.closest('.transform');
             const panels = transformSection.querySelectorAll('.panel');
-            
-            // Remover classe active de todas as tabs na mesma seção
+
             transformSection.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-            
-            // Adicionar classe active à tab clicada
+
             this.classList.add('active');
-            
-            // Esconder todos os painéis
+
             panels.forEach(panel => {
                 panel.classList.add('hide');
                 panel.classList.remove('active-panel');
             });
-            
-            // Mostrar o painel correspondente
+
             const targetPanel = transformSection.querySelector(`#panel-${tabType}`);
             targetPanel.classList.remove('hide');
-            
-            // Disparar animação após um pequeno delay
+
             setTimeout(() => {
                 targetPanel.classList.add('active-panel');
             }, 50);

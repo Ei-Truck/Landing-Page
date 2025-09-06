@@ -165,7 +165,6 @@ header.header-white .cta:hover {
     transform: scale(1.05);
 }
 
-
 /* HERO — PRIMEIRA IMAGEM  */
 .diffs h3.kicker {
     text-transform: uppercase;
@@ -334,8 +333,6 @@ section.hero {
     animation-delay: 1s;
 }
 
-
-
 /* SEÇÃO PROBLEMAS/benefícios  */
 section.problems {
     background: var(--white);
@@ -383,8 +380,6 @@ section.problems {
     line-height: 1.55;
     transition: color 0.3s ease;
 }
-
-
 
 /* TRANSFORME OS DADOS  */
 section.transform {
@@ -645,7 +640,7 @@ section.cams {
 
 .panel-title {
     display: flex;
-    align-items: center; /* mantém o texto centralizado */
+    align-items: center;
     gap: 10px;
     font-size: 28px;
     font-weight: 600;
@@ -655,7 +650,7 @@ section.cams {
     display: block;
     width: 28px;
     height: 28px;
-    transform: translateY(50px); /* ajusta a posição vertical */
+    transform: translateY(50px);
 }
 
 /* ANIMAÇÃO FADE-IN */
@@ -752,7 +747,7 @@ section.diffs {
 }
 
 .step {
-    position: relative; /* necessário para o ícone absoluto */
+    position: relative;
     background: var(--bg-100);
     padding: 20px;
     border-radius: 14px;
@@ -839,7 +834,6 @@ section.gallery {
     user-select: none;
 }
 
-
 /* RODAPÉ */
 footer {
     background: #00546B;
@@ -876,7 +870,6 @@ footer a:hover {
     transform: translateX(4px);
 }
 
-
 footer .brand {
     display: flex;
     align-items: center;
@@ -886,7 +879,6 @@ footer .brand {
     cursor: pointer;
     transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
 }
-
 
 footer .bar {
     border-top: 1px solid rgba(255, 255, 255, .12);
@@ -912,7 +904,6 @@ footer p {
     margin-top: 12px;
     color: #cfd6ff;
 }
-
 
 /* RESPONSIVIDADE */
 @media (max-width:1200px) {
@@ -1027,51 +1018,6 @@ footer p {
     box-shadow: 0 0 8px #022B3A;
 }
 
-/* Botões de navegação com ícone */
-#prevBtn,
-#nextBtn {
-    background: #022B3A;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-/* Ícones dentro dos botões */
-#prevBtn img {
-    height: 13px;
-    filter: invert(1);
-    padding-left: 8px;
-}
-
-#nextBtn img {
-    height: 13px;
-    filter: invert(1);
-    padding-left: 10px;
-}
-
-/* Hover */
-#prevBtn:hover,
-#nextBtn:hover {
-    background: #086680;
-    transform: scale(1.2);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* Desabilitado */
-#prevBtn:disabled,
-#nextBtn:disabled {
-    background: #bdc3c7;
-    cursor: default;
-    transform: none;
-    box-shadow: none;
-}
-
-
 /* ======= PLANOS ======= */
 section.pricing {
     background: var(--white);
@@ -1170,23 +1116,21 @@ section.pricing {
     gap: 10px;
     margin: 18px 0 22px;
     text-align: left;
+    padding-left: 20px;
 }
 
 .features li {
-    padding-left: 28px;
+    padding-left: 8px;
     position: relative;
     color: var(--ink-700);
 }
 
 .features li::before {
-    content: "";
+    content: "•";
     position: absolute;
-    left: 12px;
-    top: 10px;
-    height: 7px;
-    width: 7px;
-    border-radius: 50%;
-    background: var(--brand-blue-2);
+    left: 0;
+    color: var(--brand-blue-2);
+    font-size: 20px;
 }
 
 .plan-cta {
