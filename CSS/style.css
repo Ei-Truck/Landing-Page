@@ -385,6 +385,7 @@ section.problems {
 }
 
 
+
 /* TRANSFORME OS DADOS  */
 section.transform {
     padding: 80px 0;
@@ -642,6 +643,21 @@ section.cams {
     line-height: 1.7;
 }
 
+.panel-title {
+    display: flex;
+    align-items: center; /* mantém o texto centralizado */
+    gap: 10px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.panel-title svg {
+    display: block;
+    width: 28px;
+    height: 28px;
+    transform: translateY(50px); /* ajusta a posição vertical */
+}
+
 /* ANIMAÇÃO FADE-IN */
 @keyframes fadeIn {
     from {
@@ -733,6 +749,23 @@ section.diffs {
 
 .step p {
     color: var(--ink-700)
+}
+
+.step {
+    position: relative; /* necessário para o ícone absoluto */
+    background: var(--bg-100);
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid #e7edff;
+}
+
+.step .icon {
+    position: absolute;
+    top: -12px;
+    right: 40px;
+    transform: rotate(10deg);
+    width: 5px;
+    height: 5px;
 }
 
 /* COMO FUNCIONA  */
