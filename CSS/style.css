@@ -355,7 +355,6 @@ section.problems {
     padding: 24px;
     box-shadow: 0 10px 40px rgba(5, 20, 70, .08);
     transition: all 0.3s ease;
-    cursor: pointer;
 }
 
 .card-adv h4 {
@@ -370,19 +369,6 @@ section.problems {
     font-size: 16px;
     line-height: 1.55;
     transition: color 0.3s ease;
-}
-
-.card-adv:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 28px rgba(5, 20, 70, .15);
-}
-
-.card-adv:hover h4 {
-    color: #3ba9a9;
-}
-
-.card-adv:hover p {
-    color: var(--ink-700);
 }
 
 
@@ -652,12 +638,6 @@ section.cams {
 /* DIFERENCIAIS */
 #diferenciais .step {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-#diferenciais .step:hover {
-    transform: translateX(6px) scale(1.02);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 #diferenciais .step h4 {
@@ -668,10 +648,6 @@ section.cams {
 
 #diferenciais .step .n {
     transition: transform 0.3s ease;
-}
-
-#diferenciais .step:hover .n {
-    transform: scale(1.1);
 }
 
 /* NOSSOS DIFERENCIAIS  */
@@ -805,12 +781,6 @@ section.gallery {
     user-select: none;
 }
 
-.gallery .grid img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
-    filter: brightness(1.1) saturate(1.2); 
-}
-
 
 /* RODAPÉ */
 footer {
@@ -883,7 +853,6 @@ footer p {
     transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
     margin-top:12px;
     color:#cfd6ff;
-    cursor: pointer;
 }
 
 
@@ -1083,12 +1052,6 @@ section.pricing {
     transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
 
-.plan-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 36px rgba(5, 20, 70, .12);
-    border-color: #ced9ff;
-}
-
 .plan-card.popular {
     background: #eef3ff;
     border: 2px solid #ced9ff;
@@ -1173,6 +1136,12 @@ section.pricing {
     border-radius: 12px;
     padding: 14px 18px;
     font-weight: 900;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.plan-cta:hover {
+    transform: scale(1.03);
+    background-color: #044760;
 }
 
 .pricing-note {
