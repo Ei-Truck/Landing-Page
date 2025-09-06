@@ -56,6 +56,7 @@ button {
 .hide {
     display: none !important
 }
+
 /* HEADER */
 header.site-header {
     position: fixed;
@@ -91,8 +92,18 @@ header .brand img {
     transition: filter 0.3s ease;
 }
 
-header.header-white .brand img {
-    filter: brightness(0) saturate(100%) invert(27%) sepia(92%) saturate(1039%) hue-rotate(165deg) brightness(90%) contrast(92%);
+.brand #img2 {
+    display: none;
+}
+
+header.header-white .brand .logo {
+    display: none;
+}
+
+header.header-white .brand #img2 {
+    display: block;
+    height: 42px;
+    width: auto;
 }
 
 header nav {
@@ -134,7 +145,7 @@ header .cta {
 header .cta:hover {
     background-color: rgb(232, 151, 0);
     color: white;
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
 header.header-white .cta {
@@ -222,7 +233,7 @@ section.hero {
     box-shadow: var(--shadow);
     color: #fff;
     font-weight: 800;
-    transition: all 0.3s ease-in-out; 
+    transition: all 0.3s ease-in-out;
     user-select: none;
 }
 
@@ -234,7 +245,7 @@ section.hero {
 .hero .container .actions .button:hover {
     background-color: rgb(232, 151, 0);
     color: white;
-    transform: scale(1.03); 
+    transform: scale(1.03);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
@@ -264,7 +275,7 @@ section.hero {
 }
 
 .hero .visual .frame img:hover {
-    transform: scale(1.001); 
+    transform: scale(1.001);
 }
 
 /* Animação para o texto */
@@ -273,6 +284,7 @@ section.hero {
         opacity: 0;
         transform: translateY(30px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -309,6 +321,7 @@ section.hero {
         opacity: 0;
         transform: translateX(50px);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -506,7 +519,7 @@ section.transform {
     transform: translateY(0);
 }
 
-.transform .panel .copy > * {
+.transform .panel .copy>* {
     opacity: 0;
     transform: translateX(-30px);
     transition: opacity 0.6s ease, transform 0.6s ease;
@@ -524,7 +537,7 @@ section.transform {
     transition-delay: 0.4s;
 }
 
-.transform .panel.active-panel .copy > * {
+.transform .panel.active-panel .copy>* {
     opacity: 1;
     transform: translateX(0);
 }
@@ -631,8 +644,15 @@ section.cams {
 
 /* ANIMAÇÃO FADE-IN */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* DIFERENCIAIS */
@@ -851,8 +871,8 @@ footer .bbar:hover {
 
 footer p {
     transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
-    margin-top:12px;
-    color:#cfd6ff;
+    margin-top: 12px;
+    color: #cfd6ff;
 }
 
 
