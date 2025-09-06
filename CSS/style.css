@@ -681,7 +681,6 @@ section.cams {
     transition: transform 0.3s ease;
 }
 
-/* NOSSOS DIFERENCIAIS  */
 section.diffs {
     padding: 80px 0;
     background: var(--white)
