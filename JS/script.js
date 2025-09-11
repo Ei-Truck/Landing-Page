@@ -174,7 +174,7 @@ function getScrollPosition(target) {
     let positions = {
         'hero': 0,
         'solucoes': 600,
-        'transforme': 1200,
+        'transforme': 2850,
         'diferenciais': 2150,
         'como-funciona': 2400,
         'planos': 3000
@@ -232,7 +232,19 @@ function mudarPaginaNavSaibaMaisResponsivo() {
     }, 100);
 }
 
-
+function mudarPaginaNavTelemetriaResponsivo() {
+    mudarPagina(1, null);
+    setTimeout(() => {
+        const position = getScrollPosition('transforme');
+        window.scrollTo({ top: position, behavior: 'smooth' });
+        
+        // Ativa a aba de telemetria após um breve delay
+        setTimeout(() => {
+            const teleTab = document.querySelector('.tab[data-tab="tele"]');
+            if (teleTab) teleTab.click();
+        }, 500);
+    }, 100);
+}
 
 function mudarPaginaNavFuncionalidadesResponsivo() {
     mudarPagina(1, null);
