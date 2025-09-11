@@ -165,3 +165,134 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+// Função para ajustar os pontos de rolagem baseado no tamanho da tela
+function getScrollPosition(target) {
+    const screenWidth = window.innerWidth;
+    
+    // Valores padrão para desktop
+    let positions = {
+        'hero': 0,
+        'solucoes': 600,
+        'transforme': 1200,
+        'diferenciais': 2150,
+        'como-funciona': 2400,
+        'planos': 3000
+    };
+    
+    // Ajustes para tablet
+    if (screenWidth <= 1024) {
+        positions = {
+            'hero': 0,
+            'solucoes': 500,
+            'transforme': 1000,
+            'diferenciais': 1500,
+            'como-funciona': 2000,
+            'planos': 2500
+        };
+    }
+    
+    // Ajustes para mobile
+    if (screenWidth <= 768) {
+        positions = {
+            'hero': 0,
+            'solucoes': 400,
+            'transforme': 800,
+            'diferenciais': 1200,
+            'como-funciona': 1600,
+            'planos': 2000
+        };
+    }
+    
+    return positions[target] || 0;
+}
+
+// Substitua as funções de navegação existentes por estas versões responsivas
+function mudarPaginaNavResponsivo(num, target) {
+    mudarPagina(num, null);
+    setTimeout(() => {
+        const position = getScrollPosition(target);
+        window.scrollTo({ top: position, behavior: 'smooth' });
+    }, 100);
+}
+
+function mudarPaginaNavSobreResponsivo() {
+    mudarPagina(3, null);
+    setTimeout(() => {
+        const position = getScrollPosition('diferenciais');
+        window.scrollTo({ top: position, behavior: 'smooth' });
+    }, 100);
+}
+
+function mudarPaginaNavSaibaMaisResponsivo() {
+    mudarPagina(1, null);
+    setTimeout(() => {
+        const position = getScrollPosition('solucoes');
+        window.scrollTo({ top: position, behavior: 'smooth' });
+    }, 100);
+}
+
+
+
+function mudarPaginaNavFuncionalidadesResponsivo() {
+    mudarPagina(1, null);
+    setTimeout(() => {
+        const position = getScrollPosition('solucoes');
+        window.scrollTo({ top: position, behavior: 'smooth' });
+    }, 100);
+}
+
+// Atualize os event listeners para usar as novas funções
+document.addEventListener('DOMContentLoaded', function() {
+    // Substitua os event listeners existentes
+    const navLinks = document.querySelectorAll('nav a, footer a, footer h5');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Encontre qual função chamar baseado no texto ou data attribute
+            const text = this.textContent.toLowerCase() || this.getAttribute('onclick') || '';
+            
+            if (text.includes('telemetria') || text.includes('fadiga') || text.includes('rastreamento') || text.includes('monitoramento')) {
+                mudarPaginaNavTelemetriaResponsivo();
+            } else if (text.includes('sobre')) {
+                mudarPaginaNavSobreResponsivo();
+            } else if (text.includes('saiba mais')) {
+                mudarPaginaNavSaibaMaisResponsivo();
+            } else if (text.includes('produtividade') || text.includes('controle') || text.includes('segurança') || text.includes('funcionalidades')) {
+                mudarPaginaNavFuncionalidadesResponsivo();
+            }
+            // Adicione outras condições conforme necessário
+        });
+    });
+    
+    // Adicione toggle para os itens do footer em mobile
+    if (window.innerWidth <= 576) {
+        const footerHeaders = document.querySelectorAll('footer h5');
+        footerHeaders.forEach(header => {
+            header.addEventListener('click', function() {
+                this.classList.toggle('ativo');
+            });
+        });
+    }
+});
+
+// Atualize a função de redimensionamento para ajustar os toggles do footer
+window.addEventListener('resize', function() {
+    const footerHeaders = document.querySelectorAll('footer h5');
+    
+    if (window.innerWidth <= 576) {
+        footerHeaders.forEach(header => {
+            header.addEventListener('click', function() {
+                this.classList.toggle('ativo');
+            });
+        });
+    } else {
+        footerHeaders.forEach(header => {
+            header.replaceWith(header.cloneNode(true)); 
+            const uls = document.querySelectorAll('footer ul');
+            uls.forEach(ul => ul.style.display = 'grid');
+        });
+    }
+});

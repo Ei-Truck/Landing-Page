@@ -1745,3 +1745,60 @@ section.pricing {
         width: 100%;
     }
 }
+
+
+/* ======= RESPONSIVIDADE DE BOTÕES ======= */
+
+@media (max-width: 768px) {
+    .paginacao {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--brand-blue-2);
+        padding: 12px;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .paginacao button {
+        padding: 8px 16px;
+        font-size: 14px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .paginacao button.ativo {
+        background: var(--brand-green);
+        box-shadow: 0 0 10px rgba(0, 179, 119, 0.5);
+    }
+}
+
+@media (max-width: 576px) {
+    footer h5 {
+        cursor: pointer;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        margin-bottom: 10px;
+        transition: all 0.3s ease;
+    }
+    
+    footer h5:active {
+        background: rgba(255, 255, 255, 0.2);
+    }
+    
+    footer ul {
+        display: none;
+        margin-bottom: 15px;
+    }
+    
+    footer h5.ativo + ul {
+        display: grid;
+    }
+}
