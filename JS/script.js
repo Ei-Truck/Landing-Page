@@ -43,8 +43,12 @@ function mudarPaginaNavSaibaMais() {
 function mudarPaginaNavTelemetria() {
     mudarPagina(1, null);
     setTimeout(() => {
-        window.scrollTo({ top: 2860 });
-    }, 0);
+        const elemento = document.getElementById('como-funciona');
+        if (elemento) {
+            const offset = elemento.offsetTop - 72; // 72 é a altura do header
+            window.scrollTo({ top: offset, behavior: 'smooth' });
+        }
+    }, 100);
 }
 
 function mudarPaginaNavFuncionalidades() {
