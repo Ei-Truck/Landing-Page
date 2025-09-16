@@ -166,10 +166,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Função para ajustar os pontos de rolagem baseado no tamanho da tela
+let resizeTimeout;
+window.addEventListener('resize', function () {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(function () {
+        if (typeof getScrollPosition === 'function') {
+            console.log('Janela redimensionada, posições atualizadas');
+        }
+    }, 250);
+});
+
 function getScrollPosition(target) {
-    const screenWidth = window.innerWidth;
-    
+    let screenWidth = window.innerWidth;
+
     // Valores padrão para desktop
     let positions = {
         'hero': 0,
@@ -179,35 +188,248 @@ function getScrollPosition(target) {
         'como-funciona': 2400,
         'planos': 3000
     };
-    
+
     // Ajustes para tablet
     if (screenWidth <= 1024) {
         positions = {
             'hero': 0,
-            'solucoes': 500,
-            'transforme': 1000,
-            'diferenciais': 1500,
-            'como-funciona': 2000,
-            'planos': 2500
+            'solucoes': 0,
+            'transforme': 0,
+            'diferenciais': 2200,
+            'como-funciona': 2800,
+            'planos': 0
         };
     }
-    
+
     // Ajustes para mobile
-    if (screenWidth <= 768) {
+    if (screenWidth <= 900) {
         positions = {
             'hero': 0,
-            'solucoes': 400,
-            'transforme': 800,
-            'diferenciais': 1200,
+            'solucoes': 10000,
+            'transforme': 4450,
+            'diferenciais': 3400,
+            'como-funciona': 2800,
+            'planos': 2000
+        };
+    }
+
+    if (screenWidth <= 410) {
+        positions = {
+            'hero': 0,
+            'solucoes': 10000,
+            'transforme': 4650,
+            'diferenciais': 0,
             'como-funciona': 1600,
             'planos': 2000
         };
     }
-    
+
     return positions[target] || 0;
 }
 
-// Substitua as funções de navegação existentes por estas versões responsivas
+function navigateToProduct() {
+    const screenWidth = window.innerWidth;
+
+    // Desktop (acima de 1024px)
+    if (screenWidth > 1024) {
+        mudarPaginaNav(1);
+        setTimeout(() => {
+            window.scrollTo({ top: 600, behavior: 'smooth' });
+        }, 100);
+    }
+    // Tablet (768px a 1024px)
+    else if (screenWidth >= 900 && screenWidth <= 1024) {
+        mudarPaginaNav(1);
+        setTimeout(() => {
+            window.scrollTo({ top: 550, behavior: 'smooth' });
+        }, 100);
+    }
+
+    else if (screenWidth >= 410 && screenWidth <= 900) {
+        mudarPaginaNav(1);
+        setTimeout(() => {
+            window.scrollTo({ top: 1150, behavior: 'smooth' });
+        }, 100);
+    }
+
+    // Mobile (abaixo de 768px)
+    else {
+        mudarPaginaNav(1);
+        setTimeout(() => {
+            window.scrollTo({ top: 6000, behavior: 'smooth' });
+        }, 100);
+    }
+}
+
+function navigateToSearch() {
+    const screenWidth = window.innerWidth;
+
+    // Desktop (acima de 1024px)
+    if (screenWidth > 1024) {
+        mudarPaginaNav(2);
+        setTimeout(() => {
+            window.scrollTo({ top: 600, behavior: 'smooth' });
+        }, 100);
+    }
+    // Tablet (768px a 1024px)
+    else if (screenWidth >= 900 && screenWidth <= 1024) {
+        mudarPaginaNav(2);
+        setTimeout(() => {
+            window.scrollTo({ top: 550, behavior: 'smooth' });
+        }, 100);
+    }
+
+    else if (screenWidth >= 410 && screenWidth <= 900) {
+        mudarPaginaNav(2);
+        setTimeout(() => {
+            window.scrollTo({ top: 1150, behavior: 'smooth' });
+        }, 100);
+    }
+
+    // Mobile (abaixo de 768px)
+    else {
+        mudarPaginaNav(2);
+        setTimeout(() => {
+            window.scrollTo({ top: 400, behavior: 'smooth' });
+        }, 100);
+    }
+}
+
+
+function navigateToGerminare() {
+    const screenWidth = window.innerWidth;
+
+    // Desktop (acima de 1024px)
+    if (screenWidth > 1024) {
+        mudarPaginaNav(3);
+        setTimeout(() => {
+            window.scrollTo({ top: 600, behavior: 'smooth' });
+        }, 100);
+    }
+    // Tablet (768px a 1024px)
+    else if (screenWidth >= 900 && screenWidth <= 1024) {
+        mudarPaginaNav(3);
+        setTimeout(() => {
+            window.scrollTo({ top: 550, behavior: 'smooth' });
+        }, 100);
+    }
+
+    else if (screenWidth >= 410 && screenWidth <= 900) {
+        mudarPaginaNav(3);
+        setTimeout(() => {
+            window.scrollTo({ top: 1150, behavior: 'smooth' });
+        }, 100);
+    }
+    // Mobile (abaixo de 768px)
+    else {
+        mudarPaginaNav(3);
+        setTimeout(() => {
+            window.scrollTo({ top: 400, behavior: 'smooth' });
+        }, 100);
+    }
+}
+
+function navigateToAbout1() {
+    const screenWidth = window.innerWidth;
+
+    // Desktop (acima de 1024px)
+    if (screenWidth > 1024) {
+        mudarPaginaNav(3);
+        setTimeout(() => {
+            window.scrollTo({ top: 1950, behavior: 'smooth' });
+        }, 100);
+    }
+    // Tablet (768px a 1024px)
+    else if (screenWidth >= 900 && screenWidth <= 1024) {
+        mudarPaginaNav(3);
+        setTimeout(() => {
+            window.scrollTo({ top: 1250, behavior: 'smooth' });
+        }, 100);
+    }
+
+    else if (screenWidth >= 410 && screenWidth <= 900) {
+        mudarPaginaNav(3);
+        setTimeout(() => {
+            window.scrollTo({ top: 1250, behavior: 'smooth' });
+        }, 100);
+    }
+    // Mobile (abaixo de 768px)
+    else {
+        mudarPaginaNav(3);
+        setTimeout(() => {
+            window.scrollTo({ top: 400, behavior: 'smooth' });
+        }, 100);
+    }
+}
+
+function navigateToAbout2() {
+    const screenWidth = window.innerWidth;
+
+    // Desktop (acima de 1024px)
+    if (screenWidth > 1024) {
+        mudarPaginaNav(1);
+        setTimeout(() => {
+            window.scrollTo({ top: 600, behavior: 'smooth' });
+        }, 100);
+    }
+    // Tablet (768px a 1024px)
+    else if (screenWidth >= 900 && screenWidth <= 1024) {
+        mudarPaginaNav(1);
+        setTimeout(() => {
+            window.scrollTo({ top: 550, behavior: 'smooth' });
+        }, 100);
+    }
+
+    else if (screenWidth >= 410 && screenWidth <= 900) {
+        mudarPaginaNav(1);
+        setTimeout(() => {
+            window.scrollTo({ top: 1150, behavior: 'smooth' });
+        }, 100);
+    }
+
+    // Mobile (abaixo de 768px)
+    else {
+        mudarPaginaNav(1);
+        setTimeout(() => {
+            window.scrollTo({ top: 6000, behavior: 'smooth' });
+        }, 100);
+    }
+}
+
+function navigateToFuncionalidades() {
+    const screenWidth = window.innerWidth;
+
+    // Desktop (acima de 1024px)
+    if (screenWidth > 1024) {
+        mudarPaginaNav(1);
+        setTimeout(() => {
+            window.scrollTo({ top: 600, behavior: 'smooth' });
+        }, 100);
+    }
+    // Tablet (768px a 1024px)
+    else if (screenWidth >= 900 && screenWidth <= 1024) {
+        mudarPaginaNav(1);
+        setTimeout(() => {
+            window.scrollTo({ top: 550, behavior: 'smooth' });
+        }, 100);
+    }
+
+    else if (screenWidth >= 410 && screenWidth <= 900) {
+        mudarPaginaNav(1);
+        setTimeout(() => {
+            window.scrollTo({ top: 1150, behavior: 'smooth' });
+        }, 100);
+    }
+
+    // Mobile (abaixo de 768px)
+    else {
+        mudarPaginaNav(1);
+        setTimeout(() => {
+            window.scrollTo({ top: 6000, behavior: 'smooth' });
+        }, 100);
+    }
+}
+
 function mudarPaginaNavResponsivo(num, target) {
     mudarPagina(num, null);
     setTimeout(() => {
@@ -237,8 +459,7 @@ function mudarPaginaNavTelemetriaResponsivo() {
     setTimeout(() => {
         const position = getScrollPosition('transforme');
         window.scrollTo({ top: position, behavior: 'smooth' });
-        
-        // Ativa a aba de telemetria após um breve delay
+
         setTimeout(() => {
             const teleTab = document.querySelector('.tab[data-tab="tele"]');
             if (teleTab) teleTab.click();
@@ -254,18 +475,15 @@ function mudarPaginaNavFuncionalidadesResponsivo() {
     }, 100);
 }
 
-// Atualize os event listeners para usar as novas funções
-document.addEventListener('DOMContentLoaded', function() {
-    // Substitua os event listeners existentes
+document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('nav a, footer a, footer h5');
-    
+
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
-            
-            // Encontre qual função chamar baseado no texto ou data attribute
+
             const text = this.textContent.toLowerCase() || this.getAttribute('onclick') || '';
-            
+
             if (text.includes('telemetria') || text.includes('fadiga') || text.includes('rastreamento') || text.includes('monitoramento')) {
                 mudarPaginaNavTelemetriaResponsivo();
             } else if (text.includes('sobre')) {
@@ -275,34 +493,31 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (text.includes('produtividade') || text.includes('controle') || text.includes('segurança') || text.includes('funcionalidades')) {
                 mudarPaginaNavFuncionalidadesResponsivo();
             }
-            // Adicione outras condições conforme necessário
         });
     });
-    
-    // Adicione toggle para os itens do footer em mobile
+
     if (window.innerWidth <= 576) {
         const footerHeaders = document.querySelectorAll('footer h5');
         footerHeaders.forEach(header => {
-            header.addEventListener('click', function() {
+            header.addEventListener('click', function () {
                 this.classList.toggle('ativo');
             });
         });
     }
 });
 
-// Atualize a função de redimensionamento para ajustar os toggles do footer
-window.addEventListener('resize', function() {
+window.addEventListener('resize', function () {
     const footerHeaders = document.querySelectorAll('footer h5');
-    
+
     if (window.innerWidth <= 576) {
         footerHeaders.forEach(header => {
-            header.addEventListener('click', function() {
+            header.addEventListener('click', function () {
                 this.classList.toggle('ativo');
             });
         });
     } else {
         footerHeaders.forEach(header => {
-            header.replaceWith(header.cloneNode(true)); 
+            header.replaceWith(header.cloneNode(true));
             const uls = document.querySelectorAll('footer ul');
             uls.forEach(ul => ul.style.display = 'grid');
         });
