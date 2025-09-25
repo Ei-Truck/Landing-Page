@@ -527,3 +527,8 @@ window.addEventListener('resize', function () {
         });
     }
 });
+
+document.querySelector('.plan-cta').addEventListener('click', function() {
+    alert('Ótima escolha! Redirecionando para o processo de contratação...');
+    // Aqui você adicionaria a lógica real de redirecionamento
+});
