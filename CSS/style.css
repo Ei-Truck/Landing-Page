@@ -2398,13 +2398,6 @@ html {
 }
 
 @media (max-width: 767px) {
-    .hero .visual .frame img {
-        loading: lazy;
-        decoding: async;
-    }
-}
-
-@media (max-width: 767px) {
     html {
         scroll-behavior: smooth;
         scroll-padding-top: 70px;
