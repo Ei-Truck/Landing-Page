@@ -32,7 +32,8 @@ Siga estas instruções para ter uma cópia do projeto rodando em sua máquina l
     Execute o arquivo e abra o seu navegador.
 
 ## Estrutura de Pastas
-```Landing-Page/
+```
+Landing-Page/
 ├── CSS/
 │   ├── privacy-policy.css
 │   └── style.css
